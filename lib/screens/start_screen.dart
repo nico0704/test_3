@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:test_3/screens/second_screen.dart';
+import 'package:test_3/screens/third_screen.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({Key? key}) : super(key: key);
@@ -22,9 +23,23 @@ class StartScreen extends StatelessWidget {
                 child: Container(
                   height: 200,
                   width: 300,
-                  child: Image.asset("assets/sheldon.jpg"),
+                  //child: Image.asset("assets/sheldon.jpg"),
                 ),
               ),
+              ElevatedButton(
+                  onPressed: () async {
+                    print("hello World");
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => SecondScreen()),
+                    );
+                  },
+                  child: Text("Hallo")),
+              ElevatedButton(
+                  onPressed: () async {
+                    print("Stack Bsp");
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ThirdScreen()),
+                    );
+                  },
+                  child: Text("Stack bsp")),
               machZeile("24"),
               machZeile("Augenfarbe: gruen"),
               machZeile("HELLO WORLD"),
