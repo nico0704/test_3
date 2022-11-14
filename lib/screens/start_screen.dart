@@ -32,7 +32,7 @@ class StartScreen extends StatelessWidget {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => SecondScreen()),
                     );
                   },
-                  child: Text("Hallo")),
+                  child: Text("Datenschutzeinstellungen")),
               ElevatedButton(
                   onPressed: () async {
                     print("Stack Bsp");
